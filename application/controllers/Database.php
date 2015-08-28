@@ -10,9 +10,10 @@ class Database extends CI_Controller{
 	
 	public function cari()
 	{
+		$this->load->helper('url');
 		$nis = $this->input->post('nis');
 		$this->load->model('database_model');
-		$data['dbs'] = $this->database_model->get_data_where($nis);		
+		$data['dbs'] = $this->database_model->get_data_where($nis);	
 		$this->load->view('header');
 		$this->load->view('dbview',$data);	
 	}
