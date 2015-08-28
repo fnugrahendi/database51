@@ -3,16 +3,16 @@ class Database extends CI_Controller{
 
 	public function index()
 	{
-		$this->load->model('database_model');
+		$this->load->helper('form');
 		$this->load->view('header');
 		$this->load->view('search');
 	}
 	
 	public function cari()
 	{
+		$nis = $this->input->post('nis');
 		$this->load->model('database_model');
-		$data['dbs'] = $this->database_model->get_data();		
-		//echo "hello bro";
+		$data['dbs'] = $this->database_model->get_data_where($nis);		
 		$this->load->view('header');
 		$this->load->view('dbview',$data);	
 	}
