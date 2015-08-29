@@ -1,5 +1,52 @@
+@font-face{
+	font-family:'Lobster';
+	src:url(../fonts/Lobster.otf);
+}
+
 body{
-	background: #444;
-	color: #fff;
-	font-family: 'Arial';
+	font-family: 'Arial', 'Helvetica', 'Open Sans', sans;
+}
+
+.jumbotron{
+	padding:30px 15px;
+	margin-bottom:30px;
+	color:inherit;
+	background-color:#000
+}
+
+#judul{
+	font-family: 'Lobster';
+	font-weight: normal;
+	font-size: 36px;
+}
+
+.jumbotron h1,.jumbotron .h1{
+	font-family:'Lobster';
+	color:inherit
+}
+.navbar-edited {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    margin-left: -15px;
+    border: 1px solid transparent;
+}
+
+.navbar-edited > .container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+input[name='submitnis']{
+
+}
+
+.content{
+	margin: 0px auto;
+	width: 25%;
+	padding-top: 10%;
+}
+
+.data-personal p{
+	margin: 0 0;
 }
