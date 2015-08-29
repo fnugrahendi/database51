@@ -1,13 +1,16 @@
 		<div class="content">
-			<h1>Hello Brow</h1>
+			<h1>Database Tipuan</h1>
 			<?php
 			if($dbs!=null){
 				$i=0;
 				foreach($dbs as $db): 
 					if ($db['id']!='') {?>
 					<div class="data-personal">				
-						<p>Nama : <?php echo $db['fullname'];?></p>
-						<p>Panggilan : <?php print_r($db['nickname']);?></p>
+						<p>Nama : <?php echo $db['fullname'];?> ( <?php echo $db['nickname'];?> )</p>
+						<p>Kelas : <?php echo 'X '.$db['x']." | XI ".$db['xi']." | XII ".$db['xii'];?></p>
+						<p>Alamat : <?php echo $db['alamat_asal'];?></p>
+						<p>No. HP : <?php echo $db['hp1'].' | '.$db['hp2'];?></p>
+						<p>Email : <?php echo $db['email1'];?></p>
 					</div>
 				<?php }
 				$i+=1;
