@@ -6,12 +6,21 @@
 				foreach($dbs as $db): 
 					if ($db['id']!='') {?>
 					<div class="data-personal">				
-						<p>Nama : <?php echo $db['fullname'];?> ( <?php echo $db['nickname'];?> )</p>
-						<p>Kelas : <?php echo 'X '.$db['x']." | XI ".$db['xi']." | XII ".$db['xii'];?></p>
-						<p>Alamat : <?php echo $db['alamat_asal'];?></p>
-						<p>No. HP : <?php echo $db['hp1'].' | '.$db['hp2'];?></p>
-						<p>Email : <?php echo $db['email1'];?></p>
-					</div>
+						<table>
+							<tr><td>Nama</td><td class="titikdua">:</td><td><?php echo $db['fullname'];?> ( <?php echo $db['nickname'];?> )</td></tr>
+							<tr><td>Kelas</td><td class="titikdua">:</td><td><?php echo 'X '.$db['x']." | XI ".$db['xi']." | XII ".$db['xii'];?></td></tr>
+							<tr><td>Alamat</td><td class="titikdua">:</td><td><?php echo $db['alamat_asal'];?></td></tr>
+							<tr><td>No. HP</td><td class="titikdua">:</td><td><?php echo $db['hp1'].' | '.$db['hp2'];?></td></tr>
+							<tr><td>Email</td><td class="titikdua">:</td><td><?php echo $db['email1'];?></td></tr>
+						</table>
+						<p>
+							<a href="<?php echo site_url('database/'); ?>">
+								<button type="button" class="btn btn-default">Back</button>
+							</a>
+							<a href="#">
+								<button type="button" class="btn btn-default">Edit</button>
+							</a>
+						</p>
 				<?php }
 				$i+=1;
 				endforeach;?>
@@ -21,11 +30,7 @@
 					<p>Maafkan kami yang gagal menemukan datanya</p>
 				</div>
 			<?php } ?>
-			<p>
-				<a href="<?php echo site_url('database/'); ?>">
-					<button type="button" class="btn btn-default">Back</button>
-				</a>
-			</p>
+			</div>
 		</div>			
 	</body>
 </html>
