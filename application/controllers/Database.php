@@ -43,5 +43,15 @@ class Database extends CI_Controller{
 		$data['dbs'] = $this->database_model->get_data_byId($id);
 		$this->load->view('dbedit',$data);
 	}
+	
+	public function save()
+	{
+		$this->load->helper('html');
+		$this->load->helper('url');
+		$this->load->view('header');
+		$this->load->model('database_model');
+		$data['dbs'] = $this->database_model->update_data();
+		$this->load->view('dbview',$data);
+	}
 }
 ?>

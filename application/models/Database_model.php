@@ -38,4 +38,29 @@ class Database_model extends CI_Model{
 		}
 		//return json_encode($row_set);
 	}
+	
+	public function update_data()
+	{
+		$fullname = $this->input->post('fullname');
+		$nickname = $this->input->post('nickname');
+		$id = $this->input->post('id');
+		$x = $this->input->post('x');
+		$xi = $this->input->post('xi');
+		$xii = $this->input->post('xii');
+		$alamat_asal = $this->input->post('alamat');
+		$hp1 = $this->input->post('hp1');
+		$hp2 = $this->input->post('hp2');
+		$email1 = $this->input->post('email');
+		$data = array(
+			'email1' => $email1
+			);
+		$where = "id = ".$id;
+		$str = $this->db->update_string('user', $data, $where);
+		$run = $this->db->query($str);
+		if ($run == TRUE)
+		{
+			$query = $this->db->get_where('user', array('id'=>$id));
+			return $query->result_array();
+		}
+	}
 }
