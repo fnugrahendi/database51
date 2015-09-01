@@ -41,8 +41,8 @@ class Database_model extends CI_Model{
 	
 	public function update_data()
 	{
-		$fullname = $this->input->post('fullname');
-		$nickname = $this->input->post('nickname');
+		$fullname = $this->input->post('nama');
+		$nickname = $this->input->post('nama-pgl');
 		$id = $this->input->post('id');
 		$x = $this->input->post('x');
 		$xi = $this->input->post('xi');
@@ -52,6 +52,11 @@ class Database_model extends CI_Model{
 		$hp2 = $this->input->post('hp2');
 		$email1 = $this->input->post('email');
 		$data = array(
+			'fullname' => $fullname,
+			'nickname' => $nickname,
+			'x' => $x, 'xi' => $xi, 'xii' => $xii,
+			'alamat_asal' => $alamat_asal,
+			'hp1' => $hp1, 'hp2' => $hp2,
 			'email1' => $email1
 			);
 		$where = "id = ".$id;
