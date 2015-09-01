@@ -32,5 +32,16 @@ class Database extends CI_Controller{
 			$this->database_model->get_nis($q);
 		}
 	}
+	
+	public function edit($id=null)
+	{
+		$this->load->helper('url');
+		$this->load->helper('html');
+		$this->load->helper('form');
+		$this->load->view('header');
+		$this->load->model('database_model');
+		$data['dbs'] = $this->database_model->get_data_byId($id);
+		$this->load->view('dbedit',$data);
+	}
 }
 ?>

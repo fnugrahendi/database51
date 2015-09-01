@@ -17,6 +17,12 @@ class Database_model extends CI_Model{
 		return $query->result_array();
 	}
 	
+	public function get_data_byId($id = null)
+	{
+		$query = $this->db->get_where('user', array('id'=>$id));
+		return $query->result_array();
+	}
+	
 	public function get_nis($q)
 	{
 		$this->db->select('fullname');

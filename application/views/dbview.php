@@ -17,7 +17,7 @@
 							<a href="<?php echo site_url('database/'); ?>">
 								<button type="button" class="btn btn-default">Back</button>
 							</a>
-							<a href="#">
+							<a href="<?php echo site_url('database/edit/'.$db['id']); ?>">
 								<button type="button" class="btn btn-default">Edit</button>
 							</a>
 						</p>

@@ -48,6 +48,10 @@ input[name='submitnis']{
 	width: 350px;
 	text-align: left;
 }
+.edit{
+	width: 450px;
+	text-align: left;
+}
 .data-personal table{
 	margin-bottom: 10px;
 }
@@ -59,4 +63,10 @@ input[name='submitnis']{
 }
 a button{
 	text-decoration: none;
+}
+#kelas{
+	width: 50px;
+}
+#nickname{
+	width: 100px;
 }
